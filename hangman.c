@@ -11,11 +11,11 @@ void rand_ans(char s[], char a[]);
 int main()
 {
 	int num;
-	char solution[100];
+	char solution[100];                               
 	char s1[100] = "meet at midnight";
 	char s2[100] = "hello world";
 	char s3[100] = "gnu nice cs";
-	char s4[100] = "c programing is fun";
+	char s4[100] = "c programing is fun";                 //정답이될 문자열
 
 	char answer[100];
 	char ch;
@@ -36,7 +36,7 @@ int main()
 	return 0;
 }
 
-int check(char s[], char a[], char ch)
+int check(char s[], char a[], char ch)              //정답이면 해당문자 추가 함수
 {
 	int i;
 
@@ -56,7 +56,7 @@ void rand_maker(char solution[],char s1[],char s2[],char s3[],char s4[],char a[]
 
 	num = rand() % 4 + 1;
 	
-	switch (num)
+	switch (num)    //num값에 따라 solution[]의 값 지정
 	{
 	case 1:
 		strcpy(solution, s1);
