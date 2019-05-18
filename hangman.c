@@ -1,10 +1,21 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<string.h>
+#include<time.h>
 
 int check(char s[], char a[], char ch);
+int rand_maker(char s1[], char s2[], char s3[], char s4[], char a[]);
+int rand_ans(char s[], char a[]);
+
 int main()
 {
-	char solution[100] = "meet at midnight";
+	int num;
+	char solution[100];
+	char s1[100] = "meet at midnight";
+	char s2[100] = "Hello world";
+	char s3[100] = "gnu nice cs";
+	char s4[100] = "C programing is fun";
+
 	char answer[100] = "____ __ ________";
 	char ch;
 
@@ -32,4 +43,24 @@ int check(char s[], char a[], char ch)
 	}
 	if (strcmp(s, a) == 0) return 1;// 두문자열이 같으면 1
 	else return 0;                       //아니면 0 반환
+}
+
+int rand_maker(char solution[],char s1[],char s2[],char s3[],char s4[],char a[])
+{
+	int num,i;
+	num = rand() % 4 + 1;
+	
+	switch (num)
+	{
+	case 1:
+		rand_ans(s1, a);
+		break;
+	case 2:
+		rand_ans(s2, a);
+		break;
+	}
+}
+int rand_ans(char s[], char a[])
+{
+
 }
